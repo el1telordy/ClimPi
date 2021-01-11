@@ -6,7 +6,7 @@ ClimPi is a web-interface that you can run on Raspberry Pi. It shows data from D
   - [Getting Started](#getting-started)
     - [Database](#database)
     - [Python](#python)
-    - [Web Server](#webserver)
+    - [Web Server](#web-server)
     - [PHP](#php)
   - [Basic usage](#basic-usage)
   - [Author](#author)
@@ -15,21 +15,21 @@ ClimPi is a web-interface that you can run on Raspberry Pi. It shows data from D
 
 Before installing ClimPi you should install next packages:
 
-##database
+## Database
 ```bash
 sudo apt install mariadb-server
 sudo pip install mysql-connector-python
 ```
 
-#python
+## Python
 ```bash
 sudo apt install python3 python3-pip
 ```
-#webserver
+## Web Server
 ```bash
 sudo apt install apache2 -y
 ```
-#php
+## PHP
 ```bash
 sudo apt install php libapache2-mod-php -y
 sudo apt-get install php7.3-mysql
