@@ -16,7 +16,8 @@ $link = mysqli_connect("localhost", "pi", "xiaomitop", "climate");
         <title>ClimPi</title>
                            
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/justgage.js"></script>
+<!--         <script src="js/justgage.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.3.5/justgage.min.js"></script>
         <script src="js/raphael-2.1.4.min.js"></script>
         </head>
 
