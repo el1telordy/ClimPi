@@ -4,6 +4,7 @@ ClimPi is a web-interface that you can run on Raspberry Pi. It shows data from D
 
 - [ClimPi](#ClimPi)
   - [Getting Started](#getting-started)
+    - [Adafruit_DHT Library](#adafruit_dht-library)
     - [Database](#database)
     - [Python](#python)
     - [Web Server](#web-server)
@@ -14,6 +15,13 @@ ClimPi is a web-interface that you can run on Raspberry Pi. It shows data from D
 ## Getting Started
 
 Before installing ClimPi you should install next packages:
+
+## Adafruit_DHT Library
+[source](https://github.com/adafruit/Adafruit_CircuitPython_DHT)
+```bash
+sudo pip3 install adafruit-circuitpython-dht
+sudo apt-get install libgpiod2
+```
 
 ## Database
 ```bash
