@@ -1,5 +1,11 @@
-# ClimPi
+<p align="center">
+  <a href="https://github.com/el1telordy/ClimPi"><img src="https://raw.githubusercontent.com/el1telordy/ClimPi/main/ico.svg" height="100"></a>
+</p>
 
+<span align="center">
+
+# ClimPi
+</span>
 ClimPi is a web-interface that you can run on Raspberry Pi. It shows data from DHT-22 sensor.
 
 - [ClimPi](#ClimPi)
