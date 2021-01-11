@@ -40,10 +40,29 @@ sudo apt-get install libgpiod2
 sudo apt install mariadb-server
 sudo pip install mysql-connector-python
 ```
+After installation, setup MariaDB:
+```bash
+sudo mysql_secure_installation
+```
+
+Next, create database, user with privileges and table for data from sensor:
+```bash
+CREATE DATABASE climate;
+CREATE USER 'pi'@'localhost' IDENTIFIED BY 'xiaomitop';
+GRANT ALL PRIVILEGES ON climate.* TO 'pi';
+FLUSH PRIVILEGES;
+use climate;
+Create table clim1(date TIMESTAMP, temperature INT, humidity INT);
+```
 
 ## Web Server
 ```bash
 sudo apt install apache2 -y
+```
+
+Run this command after installation to remove default start page:
+```bash
+sudo rm -rf /var/www/html/index.html
 ```
 
 ## PHP
