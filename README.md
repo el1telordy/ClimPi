@@ -64,7 +64,7 @@ Go to project folder:
 cd /var/www/html/ClimPi/
 ```
 
-Schedule python script to run every 5 minute. Make sure that your login is *pi*. Otherwise replace *pi* in the end of the bottom command.
+Schedule python script to run every 5 minutes. Make sure that your login is **pi**. Otherwise replace **pi** in the end of the bottom command.
 ```bash
 sudo echo "*/5 * * * * /var/www/html/climsql.py" >> /var/spool/cron/crontabs/pi
 ```
