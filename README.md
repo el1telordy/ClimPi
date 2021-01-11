@@ -8,7 +8,7 @@ ClimPi is a web-interface that you can run on Raspberry Pi. It shows data from D
     - [Python](#python)
     - [Web Server](#web-server)
     - [PHP](#php)
-  - [Basic usage](#basic-usage)
+  - [Usage](#Usage)
   - [Author](#author)
 
 ## Getting Started
@@ -34,3 +34,9 @@ sudo apt install apache2 -y
 sudo apt install php libapache2-mod-php -y
 sudo apt-get install php7.3-mysql
 ```
+
+## Usage
+/*under construction*/
+
+## Author
+- [el1telordy](https://github.com/el1telordy)
