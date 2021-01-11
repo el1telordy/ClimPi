@@ -22,13 +22,12 @@ def getSensors():
     return(temp, hum)
 
 def main():
-    time = getTime()
-    print(time)
+    timestamp = getTime()
     getSensors() #"warm-up" function call
     time.sleep(2)
     t = getSensors()[0]
     h = getSensors()[1]
-    cursor.execute("""INSERT INTO clim1 (date, temperature, humidity) VALUES ('%s', %s, %s)""" % (time,t,h))
+    cursor.execute("""INSERT INTO clim1 (date, temperature, humidity) VALUES ('%s', %s, %s)""" % (timestamp,t,h))
     cnx.commit()
     cursor.close()
     cnx.close()
