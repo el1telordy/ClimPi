@@ -1,6 +1,11 @@
 <?php
 session_start();
-$link = mysqli_connect("localhost", "pi", "xiaomitop", "climate");
+
+$host = "localhost";
+$user = "pi";
+$passwd = "xiaomitop";
+$database = "climate";
+$link = mysqli_connect($host, $user, $passwd, $database);
 ?>
 
 <!doctype html>
