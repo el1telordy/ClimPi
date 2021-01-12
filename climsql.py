@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import adafruit_dht, time, mysql.connector
-from datetime import datetime
 
 PIN=4 #DATA GPIO PIN
 device = adafruit_dht.DHT22(PIN)
@@ -12,9 +11,8 @@ cursor = cnx.cursor(buffered=True)
 
 def getTime():
     #current date
-    now = datetime.now()
-    timestamp = datetime.timestamp(now)
-    return(datetime.utcfromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S'))
+    t = time.time()
+    return(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(t)))
 
 def getSensors():
     temp = int(device.temperature)
