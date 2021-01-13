@@ -3,8 +3,8 @@ session_start();
 
 $host = "localhost";
 $user = "pi";
-$passwd = "xiaomitop";
-$database = "climate";
+$passwd = "climpass";
+$database = "climpi";
 $link = mysqli_connect($host, $user, $passwd, $database);
 ?>
 
@@ -50,7 +50,7 @@ $link = mysqli_connect($host, $user, $passwd, $database);
             id: "g1",
             value: <?php
 
-                $output = mysqli_query($link, "SELECT temperature FROM clim1 ORDER BY date DESC LIMIT 1");
+                $output = mysqli_query($link, "SELECT temperature FROM climate ORDER BY date DESC LIMIT 1");
                 $row = mysqli_fetch_array($output);
                 echo $row["temperature"];
 
@@ -65,7 +65,7 @@ $link = mysqli_connect($host, $user, $passwd, $database);
             id: "g2",
             value: <?php
 
-                $output = mysqli_query($link, "SELECT humidity FROM clim1 ORDER BY date DESC LIMIT 1");
+                $output = mysqli_query($link, "SELECT humidity FROM climate ORDER BY date DESC LIMIT 1");
                 $row = mysqli_fetch_array($output);
                 echo $row["humidity"];
 

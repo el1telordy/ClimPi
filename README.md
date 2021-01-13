@@ -47,12 +47,12 @@ sudo mysql_secure_installation
 
 Next, create database, user with privileges and table for data from sensor:
 ```bash
-CREATE DATABASE climate;
-CREATE USER 'pi'@'localhost' IDENTIFIED BY 'xiaomitop';
-GRANT ALL PRIVILEGES ON climate.* TO 'pi';
+CREATE DATABASE climpi;
+CREATE USER 'pi'@'localhost' IDENTIFIED BY 'climpass';
+GRANT ALL PRIVILEGES ON climpi.* TO 'pi';
 FLUSH PRIVILEGES;
-use climate;
-Create table clim1(date TIMESTAMP, temperature INT, humidity INT);
+use climpi;
+CREATE TABLE climate(date TIMESTAMP, temperature INT, humidity INT);
 ```
 
 ## Web Server

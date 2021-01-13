@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.7
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import adafruit_dht, time, mysql.connector
@@ -6,7 +6,7 @@ import adafruit_dht, time, mysql.connector
 PIN=4 #DATA GPIO PIN
 device = adafruit_dht.DHT22(PIN)
 
-cnx = mysql.connector.connect(user='pi', password='xiaomitop', database='climate')
+cnx = mysql.connector.connect(user='pi', password='climpass', database='climpi')
 cursor = cnx.cursor(buffered=True)
 
 def getTime():
@@ -20,12 +20,12 @@ def getSensors():
     return(temp, hum)
 
 def main():
-    timestamp = getTime()
     getSensors() #"warm-up" function call
     time.sleep(3)
+    timestamp = getTime()
     t = getSensors()[0]
     h = getSensors()[1]
-    cursor.execute("""INSERT INTO clim1 (date, temperature, humidity) VALUES ('%s', %s, %s)""" % (timestamp,t,h))
+    cursor.execute("""INSERT INTO climate (date, temperature, humidity) VALUES ('%s', %s, %s)""" % (timestamp,t,h))
     cnx.commit()
     cursor.close()
     cnx.close()
