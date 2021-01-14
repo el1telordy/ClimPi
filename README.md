@@ -43,7 +43,7 @@ sudo apt-get install libgpiod2
 ## Database
 ```bash
 sudo apt install mariadb-server
-sudo pip install mysql-connector-python
+sudo pip3 install mysql-connector-python
 ```
 After installation, setup MariaDB:
 ```bash
