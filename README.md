@@ -23,6 +23,11 @@ ClimPi is a web-interface that you can run on Raspberry Pi. It shows data from D
 
 Before installing ClimPi you should install next packages:
 
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+
 ## Python
 ```bash
 sudo apt install python3 python3-pip
@@ -47,9 +52,10 @@ sudo mysql_secure_installation
 
 Next, create database, user with privileges and table for data from sensor:
 ```bash
+sudo mysql
 CREATE DATABASE climpi;
 CREATE USER 'pi'@'localhost' IDENTIFIED BY 'climpass';
-GRANT ALL PRIVILEGES ON climpi.* TO 'pi';
+GRANT ALL PRIVILEGES ON climpi.* TO 'pi'@'localhost';
 FLUSH PRIVILEGES;
 use climpi;
 CREATE TABLE climate(date TIMESTAMP, temperature INT, humidity INT);
@@ -75,6 +81,8 @@ sudo apt-get install php7.3-mysql
 Clone this repo in apache projects folder:
 ```bash
 cd /var/www/html/
+sudo chmod -R 770 /var/www/html/
+sudo chown -R pi:www-data /var/www/html/
 git clone https://github.com/el1telordy/ClimPi.git
 ```
 
@@ -85,7 +93,11 @@ cd /var/www/html/ClimPi/
 
 Schedule python script to run every 5 minutes. Make sure that your login is **pi**. Otherwise replace **pi** in the end of the bottom command.
 ```bash
-sudo echo "*/5 * * * * /var/www/html/climsql.py" >> /var/spool/cron/crontabs/pi
+crontab -e
+#enter 1 (nano editor)
+#add next string to the end of the file:
+*/5 * * * * /var/www/html/climsql.py
+#save by pressing ctrl+x and then Y
 ```
 /*under construction*/
 
