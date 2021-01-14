@@ -7,7 +7,7 @@
 
 </span>
 
-ClimPi is a web-interface that you can run on Raspberry Pi. It shows data from DHT-22 sensor.
+ClimPi is a web-dashboard that you can run on Raspberry Pi. It shows data from DHT-22 sensor.
 
 - [ClimPi](#ClimPi)
   - [Getting Started](#getting-started)
