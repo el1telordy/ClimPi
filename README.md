@@ -96,7 +96,7 @@ Schedule python script to run every 5 minutes. Make sure that your login is **pi
 crontab -e
 #enter 1 (nano editor)
 #add next string to the end of the file:
-*/5 * * * * /var/www/html/climsql.py
+*/5 * * * * /var/www/html/ClimPi/climsql.py
 #save by pressing ctrl+x and then Y
 ```
 /*under construction*/
