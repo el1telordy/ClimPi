@@ -91,7 +91,7 @@ Go to project folder:
 cd /var/www/html/ClimPi/
 ```
 
-Schedule python script to run every 5 minutes. Make sure that your login is **pi**. Otherwise replace **pi** in the end of the bottom command.
+Schedule python script to run every 5 minutes.
 ```bash
 crontab -e
 #enter 1 (nano editor)
