@@ -24,8 +24,7 @@ ClimPi is a web-dashboard that you can run on Raspberry Pi. It shows data from D
 Before installing ClimPi you should install next packages:
 
 ```bash
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade -y
 ```
 
 ## Python
@@ -42,7 +41,7 @@ sudo apt-get install libgpiod2
 
 ## Database
 ```bash
-sudo apt install mariadb-server
+sudo apt install mariadb-server -y
 sudo pip3 install mysql-connector-python
 ```
 After installation, setup MariaDB:
@@ -98,6 +97,11 @@ crontab -e
 #add next string to the end of the file:
 */5 * * * * /var/www/html/ClimPi/climsql.py
 #save by pressing ctrl+x and then Y
+```
+
+Reboot Raspberry Pi.
+```
+sudo reboot
 ```
 /*under construction*/
 
